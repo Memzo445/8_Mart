@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <!-- WhatsApp / Telegram preview SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Анашым, 8 наурыз құтты болсын! 🌸">
+    <meta property="og:description" content="Қымбатты анашым, сізді 8 наурыз мерекесімен шын жүректен құттықтаймын. Сіз менің өмірімдегі ең қымбат жансыз 💖">
+    <meta property="og:image" content="https://seninsaitin.netlify.app/preview.jpg">
+    <meta property="og:url" content="https://seninsaitin.netlify.app">
+    <meta property="og:site_name" content="Анама арналған сайт">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Анашымды 8 наурызбен құттықтаймын!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mart.css">
+</head>
+<body>
+
+<div id="welcome-screen">
+    <h1 style="font-size: 40px; margin-bottom: 10px;color: var(--accent);">Сәлем, Анашым! ❤️<br> 8 Наурыз Мирамыңызбен!</h1>
+    <p style="font-size: 20px; color: #cbd5e0; margin-bottom: 30px;">Самы лучший подарок сделанны свойми руками дегендиғой😅😘</p>
+    <button class="btn" onclick="unlockGift()">Сыйлықты ашу ✨</button>
+</div>
+
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="wrap">
+    <header>
+        <div class="logo">АНАШЫМ</div>
+        <div>
+            <h1 id="title">Әлемдегі ең жақсы анаға — 8 наурызбен!</h1>
+            <p class="lead">Саған арналған ерекше құттықтау: өлеңдер, естеліктер және кішігірім тосынсыйлар.</p>
+        </div>
+    </header>
+
+    <main class="card">
+        <div class="hero">
+            <div class="text">
+                <h2 id="greeting">Қымбатты <span id="momName">Анашым</span> 🌸</h2>
+                <p style="color:var(--muted)">Бүгін сенің күнің! Бұл парақша сенің күлкің үшін жасалды. Төмендегі
+                    түймелерді басып, тосынсыйларды көр.</p>
+
+                <div class="controls">
+                    <button class="btn primary" id="surpriseAll">Мерекені бастау 🎉</button>
+                    <audio id="zymuranSong" src="https://files.catbox.moe/cmfozp.mp3"></audio>
+                    <button class="btn" id="playMusic">Өлең оқу ✍️</button>
+                    <button class="btn" id="timelineBtn">Естеліктер 💌</button>
+                </div>
+            </div>
+
+            <div class="photo">
+                <img id="heroImg"
+                     src="https://files.catbox.moe/m1941n.jpg"
+                     alt="Анашым">
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card-sm">
+                <h3>Ақ тілек</h3>
+                <p id="poemPreview" style="white-space:pre-wrap;color:var(--muted); font-style: italic;">«Өлең оқу»
+                    түймесін басыңыз...</p>
+            </div>
+
+            <div class="card-sm">
+                <h3>Отбасылық галерея</h3>
+                <div class="gallery" id="gallery">
+                </div>
+            </div>
+
+            <div class="card-sm">
+                <h3>Естеліктер жолы</h3>
+                <div id="timeline" class="timeline"></div>
+            </div>
+
+            <div class="card-sm">
+                <h3>Тілек қалдыру</h3>
+                <div class="guestbook">
+                    <textarea id="guestMsg" placeholder="Жылы лебізіңді жаз..."></textarea>
+                    <div style="display:flex;gap:8px">
+                        <button class="btn" id="leaveBtn">Жіберу</button>
+                    </div>
+                    <div id="messages" style="margin-top:10px"></div>
+                </div>
+            </div>
+        </div>
+
+        <section style="margin-top:20px" class="card-sm">
+            <h3>Көңіл-күй сыйлау</h3>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <button class="btn" id="confettiBtn">Конфетти 🎊</button>
+                <button class="btn" id="emojiRainBtn">Жұлдыз жауын ✨</button>
+                <button class="btn" id="heartsBtn">Жүрекшелер ❤️</button>
+                <button class="btn" id="saveBtn">Сақтау (PDF) 🖨️</button>
+            </div>
+        </section>
+
+        <footer>
+            <div>Махаббатпен — <strong id="author">Сенің балаң</strong></div>
+            <div>2026 жыл</div>
+        </footer>
+    </main>
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script src="mart.js"></script>
+</html>
